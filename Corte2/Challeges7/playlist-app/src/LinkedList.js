@@ -2,6 +2,7 @@ class Node {
     constructor(value) {
       this.value = value;
       this.next = null;
+      this.prev = null;
     }
   }
   
@@ -17,6 +18,7 @@ class Node {
         this.head = newNode;
         this.tail = newNode;
       } else {
+        newNode.prev = this.tail;
         this.tail.next = newNode;
         this.tail = newNode;
       }

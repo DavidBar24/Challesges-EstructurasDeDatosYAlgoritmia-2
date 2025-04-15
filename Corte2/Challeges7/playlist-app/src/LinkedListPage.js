@@ -15,10 +15,17 @@ function LinkedListPage() {
     }
   };
 
+  const previousSong = () => {
+    if (currentSong?.prev) {
+      setCurrentSong(currentSong.prev);
+    }
+  };
+
   return (
     <div>
       <h2>Lista Enlazada - Reproducción</h2>
       <p>Reproduciendo: {currentSong ? currentSong.value : "Ninguna"}</p>
+      <button onClick={previousSong}>Canción Anterior</button>
       <button onClick={nextSong}>Siguiente Canción</button>
     </div>
   );
