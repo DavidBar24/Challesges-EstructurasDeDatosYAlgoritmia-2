@@ -1,0 +1,120 @@
+.tree {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.node-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 10px;
+}
+
+.node {
+    background-color: #58a6ff;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    min-width: 40px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.node:hover {
+    transform: scale(1.1);
+    background-color: #3d8af7;
+}
+
+.children {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.children::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 80%;
+    height: 20px;
+    border-top: 2px solid #accc;
+    z-index: 0;
+    transform: translateX(-50%);
+}
+
+.node-container::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: 35px;
+    background: #accc;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.controls {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.controls input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls button {
+    padding: 8px 15px;
+    background-color: #58a6ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #3d8af7;
+}
+
+.traversal-results {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.traversal-path {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
