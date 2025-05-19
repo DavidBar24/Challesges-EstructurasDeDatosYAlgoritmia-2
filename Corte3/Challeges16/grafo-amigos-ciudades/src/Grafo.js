@@ -1,8 +1,8 @@
 export class Graph {
     constructor() {
         this.nodes = [];
-        this.nodeData = {};  // { id: { type, data } }
-        this.adjList = {};   // { id: [conexiones] }
+        this.nodeData = {};
+        this.adjList = {};
     }
 
     addNode(id, type, data = {}) {

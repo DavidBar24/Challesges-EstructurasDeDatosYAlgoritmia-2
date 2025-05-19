@@ -52,7 +52,6 @@ function App() {
 
         <h1>Gestor de Amigos y Ciudades</h1>
             
-            {/* Formulario para agregar persona */}
             <div className="form-section">
                 <h2>Agregar Nueva Persona</h2>
                 <form onSubmit={handleAddPerson}>
@@ -78,7 +77,6 @@ function App() {
                 </form>
             </div>
 
-            {/* Formulario para agregar amistad */}
             <div className="form-section">
                 <h2>Conectar Amigos</h2>
                 <form onSubmit={handleAddFriendship}>
@@ -105,7 +103,6 @@ function App() {
                 </form>
             </div>
 
-            {/* Buscador de ciudades */}
             <div className="search-section">
                 <h2>Buscar Residentes por Ciudad</h2>
                 <div>
@@ -132,7 +129,6 @@ function App() {
                 )}
             </div>
 
-            {/* Visualización del grafo */}
             <div className="graph-container">
                 <GraphVisualizer data={graphData} />
             </div>
